@@ -7,7 +7,7 @@ from misago.users.signals import remove_old_ips
 class Command(BaseCommand):
     help = "Removes users IPs stored for longer than set in MISAGO_IP_STORE_TIME."
     
-    def handle(self, *args, **options):
+    def handle(self, *args, **options):x
       if not settings.MISAGO_IP_STORE_TIME:
         self.stdout.write("Old IP removal is disabled.")
         return
